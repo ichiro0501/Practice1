@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="image/favicon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>当たるんです</title>
+
+    <!-- Bootstrap core CSS -->
+    <!--<link href="/bootstrap-4.1.3/dist/css" rel="stylesheet">>
+
+
+    <!-- Custom styles for this template -->
+    {% load static %}
+    <link href="{% static "pricing.css" %}" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+      <h5 class="my-0 mr-md-auto font-weight-normal">Company name</h5>
+      <nav class="my-2 my-md-0 mr-md-3">
+        <a class="p-2 text-dark" href="#">当たるんですとは？</a>
+        <a class="p-2 text-dark" href="#">レーススケジュール</a>
+        <a class="p-2 text-dark" href="#">レース結果</a>
+        <a class="p-2 text-dark" href="#">よくある質問</a>
+        <a class="p-2 text-dark" href="#">当選者の声</a>
+      </nav>
+
+      <a class="btn btn-outline-primary" href="">新規登録</a>
+
+       {% if user.is_authenticated %}
+      <a class="btn btn-outline-primary" href="{% url 'register:logout' %}">ログアウト</a>
+      {% else %}
+      <a class="nav-item nav-link" href="{% url 'register:login' %}">ログイン</a>
+       {% endif %}
+    </div>
+
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a href="#tab1" class="nav-link navbar-default active" data-toggle="tab">当たるんですとは？</a>
+        </li>
+        <li class="nav-item">
+          <a href="#tab2" class="nav-link navbar-default" data-toggle="tab">公営くじだから安心・安全</a>
+        </li>
+        <li class="nav-item">
+          <a href="#tab3" class="nav-link navbar-default" data-toggle="tab">どんな仕組み</a>
+        </li>
+        <li class="nav-item">
+          <a href="#tab4" class="nav-link navbar-default" data-toggle="tab">どうやって買うの？</a>
+        </li>
+        <li class="nav-item">
+          <a href="#tab5" class="nav-link navbar-default" data-toggle="tab">当たったらどうするの？</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div id="tab1" class="tab-pane active">
+          <div class="jumbotron" style="background:url(image/auto1.jpeg); background-size:cover;">
+            <div class="container">
+              <h1 class="text-white"><span class="text-warning">4096</span>人に<span class="text-warning">1</span>人が必ず当たる！</h1>
+              <p class="text-white">毎回誰かが百万長者！</p>
+              <a class="btn btn-danger btn-lg text-center" href="#" role="button">初めてのかたはこちら »</a>
+            </div>
+          </div>
+        </div>
+        <div id="tab2" class="tab-pane">
+          <div class="jumbotron" style="background:url(image/auto2.jpg); background-size:cover;">
+            <div class="container">
+              <p class="text-white">日本の法律で認められた</p>
+              <p class="text-white">公営競技「オートレース」だから</p>
+              <p class="text-white"><span class="text-waring">安心・安全</span>に遊べる</p>
+              <a class="btn btn-danger btn-lg text-center" href="#" role="button">初めてのかたはこちら »</a>
+            </div>
+          </div>
+        </div>
+        <div id="tab3" class="tab-pane">
+          <div class="jumbotron" style="background:url(image/auto3.jpg); background-size:cover;">
+            <div class="container">
+              <h1 class="text-waring">1/4096</span></h1>
+              <p class="text-white">業界No.1クラスの高確率</p>
+              <p class="text-white text-muted">抽選番号はランダム発行なので</p>
+              <p class="text-white text-muted">オートレースの知識も予想するコストも不要！</p>
+              <p class="text-white text-muted">簡単に高確率くじを楽しめます</p>
+              <a class="btn btn-danger btn-lg text-center" href="#" role="button">初めてのかたはこちら »</a>
+            </div>
+          </div>
+        </div>
+        <div id="tab4" class="tab-pane">
+          <div class="jumbotron" style="background:url(image/auto4.jpg); background-size:cover;">
+            <div class="container">
+              <h1 class="text-white">パソコンひとつで楽々購入！</h1>
+              <p class="text-white">メールアドレスと簡単な情報を入力して会員登録後、</p>
+              <p class="text-white">口数と種類を選んで購入するだけ！</p>
+              <p class="text-white">パソコン・スマホひとつで簡単に楽しむことができます</p>
+              <a class="btn btn-danger btn-lg text-center" href="#" role="button">初めてのかたはこちら »</a>
+            </div>
+          </div>
+        </div>
+        <div id="tab5" class="tab-pane">
+          <div class="jumbotron" style="background:url(image/auto5.jpg); background-size:cover;">
+            <div class="container">
+              <h1 class="text-white"><span class="text-warning">最短二日以内に入金可能！</h1>
+              <p class="text-white">すでに使っているあなたの口座を登録すれば、</p>
+              <p class="text-white">当選後、清算お手続きを実施いただくと速やかに入金いたします。</p>
+              <a class="btn btn-danger btn-lg text-center" href="#" role="button">初めてのかたはこちら »</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+      <h1 class="display-4">毎回誰かが百万長者</h1>
+      <p class="lead"></p>
+    </div>
+
+    <div class="container">
+      <div class="card-deck mb-3 text-center">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-header">
+            <h2 class="my-0 font-weight-normal">１００万長者への道</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">最大当選金<small class="text-muted">１４３万円</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>1口５００円</li>
+              <li>絶賛販売中</li>
+              <li>予約状況：●●●●/4096</li>
+            </ul>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-secondary">１０口購入</button>
+              <button type="button" class="btn btn-secondary">２０口購入</button>
+              <button type="button" class="btn btn-secondary">４０口購入</button>
+              </div>
+              <div class="card-header">
+                <h2 class="my-0 font-weight-normal">１０００万長者への道</h4>
+              </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">最大当選金<small class="text-muted">１，０００万円</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>1口３，５００円</li>
+              <li>絶賛販売中</li>
+              <li>予約状況：●●●●/4096</li>
+            </ul>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-secondary">１０口購入</button>
+              <button type="button" class="btn btn-secondary">２０口購入</button>
+              <button type="button" class="btn btn-secondary">４０口購入</button>
+              </div>
+              <div class="card-header">
+                <h2 class="my-0 font-weight-normal">億万長者への道</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">最大当選金<small class="text-muted">１億円</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>1口３５，０００円</li>
+                  <li>絶賛販売中</li>
+                  <li>予約状況：●●●●/4096</li>
+                </ul>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-secondary">１０口購入</button>
+              <button type="button" class="btn btn-secondary">２０口購入</button>
+              <button type="button" class="btn btn-secondary">４０口購入</button>
+              </div>
+        </div>
+      </div>
+    </div>
+
+    <h1 class="display-4">たったの５ステップで簡単購入</h1>
+      <div class="card-deck">
+        <div class="card">
+          <img class="card-img-top" src="image/auto1.jpeg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">①会員登録</h5>
+            <p class="card-text">メールアドレスと簡単な情報を入力するだけで登録完了。</p>
+            <button type="button" class="btn btn-danger">会員登録</button>
+          </div>
+          <div class="card-footer">
+          <small class="text-muted"></small>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="image/auto1.jpeg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">②チャージ</h5>
+            <p class="card-text">購入資金をネット銀行やコンビニ、ATMなどでチャージ。様々な支払い方法をご用意。</p>
+          </div>
+          <div class="card-footer">
+          <small class="text-muted"></small>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="image/auto1.jpeg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">③購入</h5>
+            <p class="card-text">お好みの種類・口数を選んで、ワンクリックで購入。</p>
+            <button type="button" class="btn btn-danger">購入する</button>
+          </div>
+          <div class="card-footer">
+          <small class="text-muted"></small>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="image/auto1.jpeg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">④レース開催、抽選番号発行</h5>
+            <p class="card-text">予約数になると対象レースが確定。あなたの抽選番号が事前にメールで通知されます。</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted"></small>
+        </div>
+      </div>
+      <div class="card">
+          <img class="card-img-top" src="image/auto1.jpeg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">⑤当選結果発表</h5>
+            <p class="card-text">抽選番号が届いたその日の内にレースが開催。ドキドキしながら抽選番号をチェック！</p>
+            <a class="p-2 text-primary" href="#">前回のレース結果はこちら</a>
+          </div>
+          <div class="card-footer">
+          <small class="text-muted"></small>
+          </div>
+          </div>
+          </div>
+
+          <footer class="g-footer cf" role="contentinfo">
+            <div class="inner cf">
+              <ul class="footer_nav cf">
+                  <a href="/info/company">
+                  <div>運営会社</div>
+                  </a>
+                  <a href="/terms/">
+                  <div>ご利用規約</div>
+                  </a>
+                  <a href="/info/law">
+                  <div>特定商取引に基づく表示</div>
+                  </a>
+                  <a href="/info/policy">
+                  <div>サイトポリシー</div>
+                  </a>
+                  <a href="/info/privacy">
+                  <div>個人情報保護方針</div>
+                  </a>
+                  <a href="/inquiry/">
+                  <div>お問い合わせ</div>
+                  </a>
+              </ul>
+              <p class="copy">© Japan Photo Finish Corporation.</p>
+            </div>
+          </footer>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!--
+    Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="/bootstrap-4.1.3/site/docs/4.1/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="/bootstrap-4.1.3/site/docs/4.1/assets/js/vendor/popper.min.js"></script>
+    <script src="/bootstrap-4.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="/bootstrap-4.1.3/site/docs/4.1/assets/js/vendor/holder.min.js"></script>
+    <script>
+      Holder.addTheme('thumb', {
+        bg: '#55595c',
+        fg: '#eceeef',
+        text: 'Thumbnail'
+      }); -->
+    <!-- </script> -->
+  </body>
+</html>
