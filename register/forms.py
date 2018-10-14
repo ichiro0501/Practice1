@@ -1,3 +1,4 @@
+from django import forms
 from django.contrib.auth.forms import (
     AuthenticationForm, UserCreationForm
 )
@@ -21,9 +22,9 @@ class UserCreateForm(UserCreationForm):
     class Meta:
         model = User
         if User.USERNAME_FIELD == 'email':
-            fields = ('email', 'first_name', 'last_name')
+            fields = ('email',)
         else:
-            fields = ('username', 'email', 'first_name', 'last_name')
+            fields = ('username', 'email')
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

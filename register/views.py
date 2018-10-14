@@ -7,10 +7,10 @@ from django.contrib.auth.views import (
 from django.contrib.sites.shortcuts import get_current_site
 from django.core.signing import BadSignature, SignatureExpired, loads, dumps
 from django.http import Http404
-from django.shortcuts import redirect
+from django.shortcuts import redirect, resolve_url
 from django.template.loader import get_template
 from django.views import generic
-from .forms import (
+from register.forms import (
     LoginForm, UserCreateForm, UserUpdateForm
 )
 
@@ -121,4 +121,3 @@ class UserUpdate(OnlyYouMixin, generic.UpdateView):
 
     def get_success_url(self):
         return resolve_url('register:user_detail', pk=self.kwargs['pk'])
- 
